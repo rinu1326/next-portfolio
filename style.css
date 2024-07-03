@@ -170,7 +170,7 @@ background-color: #fff;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
+.containerr {
   max-width: 968px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -279,6 +279,10 @@ header{
   .logo img{
     max-width: 120px;
     height: auto;
+    
+  }
+  b{
+    color: #7e7e7a;
   }
   .navmenu{
     display: flex;
@@ -295,7 +299,7 @@ header{
     font-weight: 400;
     transition: all .42s ease;
   }
-  .navmenu a:hover{
+  .navmenu b:hover{
     color: #ee1c47;
   }
   .nav-icon{
@@ -347,13 +351,14 @@ header{
       right: -100%;
       width: 300px;
       height: 130vh;
-      background: #edfff1;
+      background: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 120px 30px;
       transition: all .42s ;
     }
+    
     .navmenu a{
       display: block;
       margin: 18px 0;
@@ -385,6 +390,9 @@ color: var(--title-color);
 .light-theme .testimonial__card,
 .light-theme .contact__card{
     box-shadow: 0 2px 16px hsla(var(--second-hue),48%,8%,.1);
+}
+.light-theme .contact__form-tag{
+    display: none;
 }
 
 /* Change background header */
@@ -429,9 +437,10 @@ color: var(--title-color);
     /* margin-left: 6rem; */
 }
 .home-handle{
-    justify-self: center;
+    /* justify-self: center;
     width: 190px;
-    height: 293px;
+    height: 293px; */
+    margin-top: 50px;
    background: linear-gradient( 180deg,
                 hsla(var(--first-hue),var(--sat),var(--lig),1)
                 hsla(var(--first-hue),var(--sat),var(--lig),.2)
@@ -575,6 +584,9 @@ color: var(--title-color);
     border-radius: .75rem;
     padding: .75rem .5rem;
 }
+.about-box:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 .about-icon{
     font-size: 1.5rem;
@@ -652,6 +664,10 @@ color: var(--title-color);
     padding: 3rem 1.5rem 1.5rem;
     border-radius: 1rem;
 }
+.services__card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 
 .services__title{
     font-size: var(--h3-font-size);
@@ -813,6 +829,7 @@ color: var(--title-color);
     border-radius: 3rem;
     margin-bottom: 1rem;
 }
+
 .testimonial__name{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
@@ -930,6 +947,8 @@ color: var(--title-color);
 /*=============== FOOTER ===============*/
 .footer{
     background-color: var(--first-color);
+    height: 300px;
+    overflow: hidden;
 }
 .footer__container{
     padding: 2rem 0 6rem;
@@ -992,9 +1011,10 @@ color: var(--title-color);
     .home-buttons{
         flex-direction: column;
     }
-    .home-handle{
-        width: 150px;
-        height: 253px;
+    .home-handle .home-img{
+        /* width: 150px;
+        height: 253px; */
+        margin-left: 100px !important;
 
     }
     .home-img{
@@ -1090,7 +1110,7 @@ color: var(--title-color);
 /* For large devices */
 
 @media screen and (min-width:992px){
-    .container{
+    .containerr{
         margin-left: auto;
         margin-right: auto;
     }
@@ -1127,6 +1147,7 @@ color: var(--title-color);
     .about-img{
         width: 300px;
         text-align: initial;
+       
     }
     .about-info{
         justify-content: initial;

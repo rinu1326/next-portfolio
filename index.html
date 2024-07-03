@@ -29,15 +29,17 @@
     <body>
         <!--=============== HEADER ===============-->
         <header class="header sticky" id="header">
-            <a href="#" class="logo"> <i class="bx bxs-moon size" id="dark"></i></a>
+            <b href="#" class="logo"> <i class="bx bxs-moon size" id="dark"></i></b>
            
                
                
             <ul class="navmenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mens.html">About</a></li>
-                <li><a href="kids.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
             </ul>
         
         
@@ -143,8 +145,8 @@
             </section>
 
 
-            <div class="container ">
-                <div class="row">
+            <div class="container">
+                <div class="row ">
                     <div class="col-lg-6 col-md-6 col-12">
                         
                         <div class="home-data">
@@ -160,11 +162,11 @@
                         <a href="">
                      <i class='bx bxl-linkedin'></i>
                      </a>
-                     <a href=""><i class='bx bxl-instagram'></i></a>
+                     <a href="https://www.instagram.com/_rinxxi"><i class='bx bxl-instagram'></i></a>
                         </div>
 
                         <div class="home-btn ml-5">
-                            <a download="./Grey Clean CV Resume Photo.pdf" href="" class="button button--ghost">
+                            <a download="./pdf/Grey Clean CV Resume Photo.pdf" href="" class="button button--ghost">
                                 Download CV
                             </a>
                             <a href="" class="button">About me</a>
@@ -174,9 +176,13 @@
            
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-lg-6 col-md-6 col-12 ">
                         <div class="home-handle mt-3  ml-5">
-                            <img src="./image-of-happy-asian-woman-reading-message-on-mobi-FKGGSJ9-e1650561666821.png" alt="" class="home-img ">
+                            <!-- <img src="./images/image-of-happy-asian-woman-reading-message-on-mobi-FKGGSJ9-e1650561666821.png" alt="" class="home-img  ">
+
+                             -->
+                            <img src="./images/photo.jpg" alt="" class="home-img  ">
+
                         </div>
                     </div>
                 </div>
@@ -187,8 +193,12 @@
                 <span class="section__subtitle">My Intro</span>
                 <h2 class="section__title">About Me</h2>
 
-                <div class="about-container container grid">
-                    <img src="./image-of-happy-asian-woman-reading-message-on-mobi-FKGGSJ9-e1650561666821.png" alt="" class="about-img">
+                <div class="about-container containerr grid">
+                    <!-- <img src="./images/image-of-happy-asian-woman-reading-message-on-mobi-FKGGSJ9-e1650561666821.png" alt="" class="about-img"> -->
+
+
+                    <img src="./images/photo.jpg" alt="" class="about-img">
+
                     <div class="about-data">
                         <div class="about-info">
                             <div class="about-box">
@@ -208,7 +218,7 @@
                             </div>
                         </div>
 
-                        <p class="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, similique?</p>
+                        <p class="about-description">Dedicated and self-motivated programmer with a passion for continuous learning and improvement. Proficient in various programming languages and always eager to explore new technologies. Strong problem-solving skills and the ability to work independently on complex projects.</p>
                         <a href="" class="button">contact me</a>
                     </div>
                 </div>
@@ -331,14 +341,14 @@
             </section>
 
             <!--=============== SERVICES ===============-->
-            <section class="services section">
+            <section class="services section" id="services">
                 <span class="section__subtitle">My services</span>
                 <h2 class="section__title">What I Offer</h2>
 
-               <div class="services__container container grid">
+               <div class="services__container containerr grid">
                 <div class="services__card">
-                    <h3 class="services__title">Web Design</h3>
-                    <span class="services__button">
+                    <h3 class="services__title ">Web Design</h3>
+                    <span class="services__button pt-4">
                         See more  <i class='bx bx-right-arrow-alt services__icon' ></i>
                     </span>
 
@@ -386,8 +396,8 @@
 
                 </div>
                 <div class="services__card">
-                    <h3 class="services__title">Frotend <br> development</h3>
-                    <span class="services__button">
+                    <h3 class="services__title ">Frotend <br> development</h3>
+                    <span class="services__button pb-3">
                         See more  <i class='bx bx-right-arrow-alt services__icon' ></i>
                     </span>
 
@@ -433,7 +443,7 @@
                     </div>
                 </div>
                 <div class="services__card">
-                    <h3 class="services__title"> web design</h3>
+                    <h3 class="services__title"> Landing Page Design</h3>
                     <span class="services__button">
                         See more  <i class='bx bx-right-arrow-alt services__icon' ></i>
                     </span>
@@ -495,48 +505,80 @@
                 </div>
                <div class="work__container container grid">
                 <div class="work__card mix React">
-                    <img src="./work4.jpg" alt="" class="work__img">
-                    <h3 class="work__title">web design</h3>
+                    <img src="./images/food-app.png" alt="" class="work__img">
+                    <h3 class="work__title text-center">Food delivey app</h3>
                     <a href="" class="work__button">
                         Github
                     </a>
-                    <a href="" class="work__button">Live preview</a>
+                    <a href="https://food-delivery-app3.netlify.app" class="work__button">Live preview</a>
+                </div>
+                
+            <div class="work__card mix React">
+                <img src="./images/netflix.png" alt="" class="work__img">
+                <h3 class="work__title text-center">Netflix Clone</h3>
+                <a href="" class="work__button">
+                    Github
+                </a>
+                <a href="https://netflix1-clone.netlify.app" class="work__button">Live preview</a>
+            </div>
+
+
+            <div class="work__card mix React">
+                <img src="./images/spotify.png" alt="" class="work__img">
+                <h3 class="work__title text-center">Spotify Clone</h3>
+                <a href="" class="work__button">
+                    Github
+                </a>
+                <a href="https://spotify20-clone.netlify.app" class="work__button">Live preview</a>
+            </div>
+
+            <div class="work__card mix frontend">
+                <img src="./images/e-commerce.png" alt="" class="work__img">
+                <h3 class="work__title text-center">E-commerce</h3>
+                <a href="" class="work__button">
+                    Github
+                </a>
+                <a href="https://e-commerce-8.netlify.app" class="work__button">Live preview</a>
+            </div>
+               
+          
+                <div class="work__card mix frontend">
+                    <img src="./images/boot.png" alt="" class="work__img">
+                    <h3 class="work__title text-center">Landing Page</h3>
+                    <a href="" class="work__button">
+                        Github
+                    </a>
+                    <a href="https://bootrap-responcive.netlify.app" class="work__button">Live preview</a>
                 </div>
                 <div class="work__card mix frontend">
-                    <img src="./work4.jpg" alt="" class="work__img">
-                    <h3 class="work__title">app movie</h3>
+                    <img src="./images/porfolio.png" alt="" class="work__img">
+                    <h3 class="work__title text-center">My Portfolio</h3>
                     <a href="" class="work__button">
                         Github
                     </a>
-                    <a href="" class="work__button">Live preview</a>
+                    <a href="https://my-portfolio-2-1.netlify.app" class="work__button">Live preview</a>
                 </div>
-                <div class="work__card mix frontend">
-                    <img src="./work4.jpg" alt="" class="work__img">
-                    <h3 class="work__title">Brand design</h3>
-                    <a href="" class="work__button">
-                        Github
-                    </a>
-                    <a href="" class="work__button">Live preview</a>
-                </div>
+               
                 <div class="work__card mix Fullstack">
-                    <img src="./work4.jpg" alt="" class="work__img">
-                    <h3 class="work__title">React design</h3>
+                    <img src="./images/work4.jpg" alt="" class="work__img">
+                    <h3 class="work__title text-center">React design</h3>
                     <a href="" class="work__button">
                         Github
                     </a>
                     <a href="" class="work__button">Live preview</a>
                 </div>
-                <div class="work__card">
-                    <img src="./work4.jpg" alt="" class="work__img">
-                    <h3 class="work__title">Applications</h3>
+                <div class="work__card mix frontend">
+                    <img src="./images/muzik.png" alt="" class="work__img">
+                    <h3 class="work__title text-center">Landing Page</h3>
                     <a href="" class="work__button">
                         Github
                     </a>
-                    <a href="" class="work__button">Live preview</a>
+                    <a href="https://awesome-landing-page1.netlify.app" class="work__button">Live preview</a>
                 </div>
                </div>
             </section>
-
+           
+           
             <!--=============== TESTIMONIALS ===============-->
             <!-- <section class="testimonial section">
 
@@ -576,13 +618,13 @@
                 
             </section> -->
 
-            <section class="testimonial section">
+            <section class="testimonial section " id="testimonial">
                 <span class="section__subtitle">My clients say</span>
                 <h2 class="section__title">Testimonials</h2>
                 <div class="testimonial__container container swiper">
                     <div class="swiper-wrapper">
                         <div class="testimonial__card swiper-slide">
-                            <img src="./testimonial3.png" alt="" class="testimonial__img">
+                            <img src="./images/elon musk.webp" alt="" class="testimonial__img">
                             <h3 class="testimonial__name">Elon Musk</h3>
                             <p class="testimonial__description">
                                 A really good job, all aspects of the project were
@@ -590,7 +632,7 @@
                             </p>
                         </div>
                         <div class="testimonial__card swiper-slide">
-                            <img src="./testimonial3.png" alt="" class="testimonial__img">
+                            <img src="./images/jeff becozes.webp" alt="" class="testimonial__img rounded-circle">
                             <h3 class="testimonial__name">Elon Musk</h3>
                             <p class="testimonial__description">
                                 A really good job, all aspects of the project were
@@ -598,7 +640,7 @@
                             </p>
                         </div>
                         <div class="testimonial__card swiper-slide">
-                            <img src="./testimonial3.png" alt="" class="testimonial__img">
+                            <img src="./images/MrBeast-Jimmy-Donaldson.webp" alt="" class="testimonial__img rounded-circle">
                             <h3 class="testimonial__name">Elon Musk</h3>
                             <p class="testimonial__description">
                                 A really good job, all aspects of the project were
@@ -617,15 +659,15 @@
             <section class="contact section" id="contact">
                 <span class="section__subtitle">Get in touch</span>
                 <h2 class="section__title">Contact me</h2>
-                <div class="contact__container container grid">
+                <div class="contact__container containerr grid">
                     <div class="contact__content">
                         <h3 class="contact__title">Talk To me</h3>
                         <div class="contact__info">
                             <div class="contact__card">
                                 <i class='bx bx-mail-send contact__card-icon'  ></i>
                                 <h3 class="contact__card-title">Email</h3>
-                                <span class="contact__card-data">nifu4040@gmail.com</span>
-                                <a href="mailto:examplemail@nifu4040.com"  class="contact__button">
+                                <span class="contact__card-data">nifunifu10@gmail.com</span>
+                                <a href="mailto:nifunifu10@gmail.com"  class="contact__button">
                                     Write me <i class='bx bx-right-arrow-alt contact__button-icon'  ></i>
                                 </a>
                             </div>
@@ -634,7 +676,7 @@
                                 <i class='bx bxl-whatsapp contact__card-icon'  ></i>
                                 <h3 class="contact__card-title">Whatsapp</h3>
                                 <span class="contact__card-data">+91 7034263865</span>
-                                <a href="https://Whatsapp.com/send?phone=7034263865&text=Hello more information"  class="contact__button">
+                                <a href="https://api.whatsapp.com/send/?phone=+917034263865&text=Hello+more+information"  class="contact__button">
                                     Write me <i class='bx bx-right-arrow-alt contact__button-icon'  ></i>
                                 </a>
                             </div>
@@ -643,7 +685,7 @@
                                 <i class='bx bxl-instagram contact__card-icon'  ></i>
                                 <h3 class="contact__card-title">Instagram</h3>
                                 <span class="contact__card-data">_rinxxi</span>
-                                <a href=""  class="contact__button">
+                                <a href="https://www.instagram.com/_rinxxi"  class="contact__button">
                                     Write me <i class='bx bx-right-arrow-alt contact__button-icon'  ></i>
                                 </a>
                             </div>
@@ -676,7 +718,7 @@
 
         <!--=============== FOOTER ===============-->
         <footer class="footer">
-            <div class="footer__container container">
+            <div class="footer__container containerr">
                 <h1 class="footer__title">Rinshid</h1>
                 <ul class="footer__list">
                     <li>
@@ -709,6 +751,8 @@
             
         </footer>
 
+        
+
         <!--=============== SCROLLREVEAL ===============-->
         <script src=""></script>
 
@@ -717,8 +761,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!--=============== MIXITUP FILTER ===============-->
-        <script src="./mixitup.min.js"></script>
-
+          <script src="https://cdn.jsdelivr.net/npm/mixitup@3.3.1/dist/mixitup.min.js"></script>
         <!--=============== MAIN JS ===============-->
         <script src="./script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

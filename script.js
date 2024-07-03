@@ -12,6 +12,7 @@ let menu =document.querySelector('#menu-icon');
     menu.onclick = () =>{
         menu.classList.toggle('bx-x')
         navmenu.classList.toggle('open')
+        
     }
 
 
@@ -193,8 +194,10 @@ toggleButton.addEventListener('click', () => {
   if (body.classList.contains(darkTheme)) {
     toggleButton.classList.remove(moonIcon);
     toggleButton.classList.add(sunIcon); // bx-sun for light mode icon
+    toggleButton.style.color='#efed9b'
   } else {
     toggleButton.classList.remove(sunIcon);
     toggleButton.classList.add(moonIcon);
+    toggleButton.style.color='#7e7e7a'
   }
 });
