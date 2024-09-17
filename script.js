@@ -60,127 +60,57 @@ linkWork.forEach(l=>l.addEventListener('click',activeWork))
 
 
 
-let swiperTestimonial = new Swiper(".testimonial__container", {
+// let swiperTestimonial = new Swiper(".testimonial__container", {
   
+//     spaceBetween: 24,
+//     loop:true,
+//     grabCursor:true,
+
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//         576: {
+//           slidesPerView: 2,
+//           spaceBetween: 20,
+//         },
+//         768: {
+//           slidesPerView: 2,
+//           spaceBetween: 48,
+//         },
+      
+//       }
+//   });
+let swiperTestimonial = new Swiper(".testimonial__container", {
     spaceBetween: 24,
-    loop:true,
-    grabCursor:true,
+    loop: true, // Ensure that loop is set to true for infinite scrolling
+    grabCursor: true, // Optional: to show a grabbing hand cursor
 
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true, // Allows pagination bullets to be clickable
     },
     breakpoints: {
         576: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+            slidesPerView: 2,
+            spaceBetween: 20,
         },
         768: {
-          slidesPerView: 2,
-          spaceBetween: 48,
+            slidesPerView: 2,
+            spaceBetween: 48,
         },
-      
-      }
-  });
+    },
+    // Optional settings for autoplay if you want continuous scrolling
+    autoplay: {
+        delay: 2000, // Delay between slides in milliseconds
+        disableOnInteraction: false, // Continue autoplay after user interactions
+    },
+});
 
   
 
 
-//   document.addEventListener('contextmenu',function(e){
-//     alert('inspect not alowed on this portpholio')
-//     e.preventDefault()
-//   })
-
-
-
-//   dark theame
-
-// const themeButton = document.getElementById('theame-btn')
-// const lightTheme ='light-theme'
-// const iconTheme ='bx-sun'
-
-
-// const selectedTheme = localStorage.getItem('selected-theme')
-// const selectedIcon =localStorage.getItem('selected-icon')
-
-// const getCurrentTheme = () => document.body.classList.contains(lightTheme)? 'dark':'light'
-// const getCurrentIcon = ()=>themeButton.classList.contains(iconTheme)?'bx bx-moon':'bx bx-sun'
-
-// if(selectedTheme){
-//     document.body.classList[selectedTheme === 'dark'? 'add':'remove'](lightTheme)
-//     themeButton.classList[selectedIcon === 'bx bx-moon'?'add':'remove'](iconTheme)
-// }
-
-
-// themeButton.addEventListener('click',()=>{
-//     document.body.classList.toggle(lightTheme)
-//     themeButton.classList.toggle(iconTheme)
-
-//     localStorage.setItem('selected-theme',getCurrentTheme())
-//     localStorage.setItem('selected-icon',getCurrentIcon())
-// })
-
-// const themeButton = document.getElementById('theme-btn')
-// const lightTheme = 'light-theme'
-// const iconTheme = 'bx-sun'
-
-// const selectedTheme = localStorage.getItem('selected-theme')
-// const selectedIcon = localStorage.getItem('selected-icon')
-
-// const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark'
-// const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon'
-
-// if (selectedTheme) {
-//     document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
-//     themeButton.classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme)
-// }
-
-// themeButton.addEventListener('click', () => {
-//     document.body.classList.toggle(lightTheme)
-//     themeButton.classList.toggle(iconTheme)
-
-//     localStorage.setItem('selected-theme', getCurrentTheme())
-//     localStorage.setItem('selected-icon', getCurrentIcon())
-// })
-
-// const themeButton = document.getElementById('theme-btn');
-// const lightTheme = 'light-theme';
-// const iconTheme = 'bx-sun';
-
-// const selectedTheme = localStorage.getItem('selected-theme');
-// const selectedIcon = localStorage.getItem('selected-icon');
-
-// const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark';
-// const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon';
-
-// if (selectedTheme) {
-//     document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme);
-//     themeButton.classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme);
-// }
-
-// themeButton.addEventListener('click', () => {
-//     document.body.classList.toggle(lightTheme);
-//     themeButton.classList.toggle(iconTheme);
-
-//     localStorage.setItem('selected-theme', getCurrentTheme());
-//     localStorage.setItem('selected-icon', getCurrentIcon());
-// });
-
-
-
-
-// let btn = document.getElementById('theame-btn')
-
-// btn.onclick=function(){
-//     document.body.classList.toggle('light-theme')
-
-//     if(document.body.classList.contains('light-theme')){
-//         btn.src="./images/night-mode.png"
-//     }else{
-//         btn.src="./images/—Pngtree—sun icon design_4816760.png"
-//         btn.style.width='20px'
-//     }
-// }
 const toggleButton = document.getElementById('dark');
 const body = document.body;
 const darkTheme = 'light-theme'; // Assuming 'light-theme' is the class for light theme
@@ -200,4 +130,195 @@ toggleButton.addEventListener('click', () => {
     toggleButton.classList.add(moonIcon);
     toggleButton.style.color='#7e7e7a'
   }
+});
+
+
+
+
+// const loadMoreBtn = document.getElementById('loadMoreBtn');
+// const filterButtons = document.querySelectorAll('.work__item'); // All filter buttons
+// let allItemsLoaded = false; // Track whether all items are fully loaded
+
+// // Event listener for the "Load More" button
+// loadMoreBtn.addEventListener('click', function () {
+//     const hiddenCards = document.querySelectorAll('.work__card.hidden'); // Get updated list of hidden cards
+
+//     // Show up to 3 more hidden items
+//     let itemsShown = 0;
+//     hiddenCards.forEach(card => {
+//         if (itemsShown < 3) {
+//             card.classList.remove('hidden');
+//             itemsShown++;
+//         }
+//     });
+
+//     // Hide the button if there are no more hidden items
+//     if (document.querySelectorAll('.work__card.hidden').length === 0) {
+//         loadMoreBtn.style.display = 'none';
+//         allItemsLoaded = true; // All items are now loaded
+//     }
+// });
+
+// // Handle filter button clicks
+// filterButtons.forEach(button => {
+//     button.addEventListener('click', function (event) {
+//         if (!allItemsLoaded) {
+//             event.preventDefault(); // Prevent filter change
+//             event.stopPropagation(); // Prevent any further event propagation
+            
+//             // Show SweetAlert
+//             Swal.fire({
+//                 title: 'Please load all items before switching categories!!',
+              
+//                 icon: 'warning',
+//                 confirmButtonText: 'OK',
+//                 position: 'center' // Ensure the alert appears centered
+//             }).then(() => {
+//                 // Optionally, force a refresh after the alert is closed
+//                 location.reload();
+//             });
+//         } else {
+//             // Your filter logic here when all items are loaded
+//             console.log('Filter applied');
+//         }
+//     });
+// });
+// const loadMoreBtn = document.getElementById('loadMoreBtn');
+// const filterButtons = document.querySelectorAll('.work__item'); // All filter buttons
+// let allItemsLoaded = false; // Track whether all items are fully loaded
+
+// // Create and append a spinner inside the "Load More" button
+// const spinner = document.createElement('div');
+// spinner.className = 'spinner';
+// loadMoreBtn.appendChild(spinner);
+
+// // Event listener for the "Load More" button
+// loadMoreBtn.addEventListener('click', function () {
+//     spinner.style.display = 'block'; // Show the spinner
+
+//     setTimeout(() => {
+//         const hiddenCards = document.querySelectorAll('.work__card.hidden'); // Get updated list of hidden cards
+
+//         // Show up to 3 more hidden items
+//         let itemsShown = 0;
+//         hiddenCards.forEach(card => {
+//             if (itemsShown < 3) {
+//                 card.classList.remove('hidden');
+//                 itemsShown++;
+//             }
+//         });
+
+//         // Hide the button if there are no more hidden items
+//         if (document.querySelectorAll('.work__card.hidden').length === 0) {
+//             loadMoreBtn.style.display = 'none';
+//             allItemsLoaded = true; // All items are now loaded
+//         }
+
+//         spinner.style.display = 'none'; // Hide the spinner
+//     }, 1000); // Adjust the delay as needed
+// });
+
+// // Handle filter button clicks
+// filterButtons.forEach(button => {
+//     button.addEventListener('click', function (event) {
+//         if (!allItemsLoaded) {
+//             event.preventDefault(); // Prevent filter change
+//             event.stopPropagation(); // Prevent any further event propagation
+            
+//             // Show SweetAlert
+//             Swal.fire({
+//                 title: 'Please load all items before switching categories!!',
+//                 icon: 'warning',
+//                 confirmButtonText: 'OK',
+//                 position: 'center' // Ensure the alert appears centered
+//             }).then(() => {
+//                 // Optionally, force a refresh after the alert is closed
+//                  location.reload(); 
+//             });
+//         } else { console.log('Filter applied');
+//             // Your filter logic here when all items are loaded
+//             console.log('Filter applied');
+//         }
+//     });
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const hiddenCards = document.querySelectorAll('.work__card.hidden');
+//     hiddenCards.forEach(card => card.style.display = 'none'); // Ensure hidden items are not visible
+// });
+
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const filterButtons = document.querySelectorAll('.work__item'); // All filter buttons
+let allItemsLoaded = false; // Track whether all items are fully loaded
+
+// Create and append a spinner inside the "Load More" button
+const spinner = document.createElement('div');
+spinner.className = 'spinner';
+spinner.style.display = 'none'; // Initially hide the spinner
+loadMoreBtn.appendChild(spinner);
+
+// Event listener for the "Load More" button
+loadMoreBtn.addEventListener('click', function () {
+    spinner.style.display = 'block'; // Show the spinner
+
+    setTimeout(() => {
+        const hiddenCards = document.querySelectorAll('.work__card.hidden'); // Get updated list of hidden cards
+
+        // Show up to 3 more hidden items
+        let itemsShown = 0;
+        hiddenCards.forEach(card => {
+            if (itemsShown < 3) {
+                card.classList.remove('hidden'); // Remove 'hidden' class
+                card.style.display = 'block'; // Ensure item is visible
+                itemsShown++;
+            }
+        });
+
+        // Hide the button if there are no more hidden items
+        if (document.querySelectorAll('.work__card.hidden').length === 0) {
+            loadMoreBtn.style.display = 'none';
+            allItemsLoaded = true; // All items are now loaded
+        }
+
+        spinner.style.display = 'none'; // Hide the spinner
+    }, 1000); // Adjust the delay as needed
+});
+
+// Handle filter button clicks
+filterButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+        if (!allItemsLoaded) {
+            event.preventDefault(); // Prevent filter change
+            event.stopPropagation(); // Prevent any further event propagation
+            
+            // Show SweetAlert
+            Swal.fire({
+                title: 'Please load all items before switching categories!',
+                icon: 'warning',
+                confirmButtonText: 'OK',
+                position: 'center' // Ensure the alert appears centered
+            }).then(() => {
+                // Optionally, force a refresh after the alert is closed
+                location.reload();
+            });
+        } else {
+            // Your filter logic here when all items are loaded
+            console.log('Filter applied');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hiddenCards = document.querySelectorAll('.work__card.hidden');
+    hiddenCards.forEach(card => {
+        card.style.display = 'none'; // Initially ensure hidden items are not visible
+    });
+});
+
+
+loadMoreBtn.addEventListener('click', function () {
+    spinner.style.display = 'inline-block';  // Make sure it's visible
+    setTimeout(() => {
+        spinner.style.display = 'none'; // Hide the spinner after the items load
+    }, 1000); // Adjust the delay as needed
 });
