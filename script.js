@@ -322,3 +322,32 @@ loadMoreBtn.addEventListener('click', function () {
         spinner.style.display = 'none'; // Hide the spinner after the items load
     }, 1000); // Adjust the delay as needed
 });
+
+
+
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault(); 
+    Swal.fire({
+        title: 'Inspecting is not allowed in my Portfolio',
+        text: 'Right-click is disabled on this page.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        position: 'center'
+    });
+});
+
+
+
+// Detect F12 (Inspect element key) or Ctrl+Shift+I
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault(); 
+        Swal.fire({
+            title: 'i told you Inspecting is not allowed!',
+            text: 'Developer tools are disabled on this portfolio.',
+            icon: 'warning',
+            confirmButtonText: 'OK',
+            position: 'center'
+        });
+    }
+});
