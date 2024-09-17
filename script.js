@@ -329,7 +329,7 @@ document.addEventListener('contextmenu', (e) => {
     e.preventDefault(); 
     Swal.fire({
         title: 'Inspecting is not allowed in my Portfolio',
-        text: 'Right-click is disabled on this page.',
+        text: 'Right click is disabled on this portfolio.',
         icon: 'warning',
         confirmButtonText: 'OK',
         position: 'center'
