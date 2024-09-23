@@ -325,7 +325,7 @@ loadMoreBtn.addEventListener('click', function () {
 
 
 
-document.addEventListener('contextmennu', (e) => {
+document.addEventListener('contextmenu', (e) => {
     e.preventDefault(); 
     Swal.fire({
         title: 'Inspecting is not allowed in my Portfolio',
