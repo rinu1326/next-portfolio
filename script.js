@@ -351,3 +351,31 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
+
+
+
+
+
+  // This variable simulates the total visitor count
+  let totalVisitors = localStorage.getItem('totalVisitors');
+
+  // If it's the first time visiting, initialize the visitor count
+  if (!totalVisitors) {
+      totalVisitors = 0;
+  } else {
+      totalVisitors = parseInt(totalVisitors);
+  }
+
+  // Check if the user has visited before in the session (to avoid double counting)
+  if (!sessionStorage.getItem('visited')) {
+      // Increment total visitors by 1
+      totalVisitors += 1;
+      localStorage.setItem('totalVisitors', totalVisitors);
+
+      // Mark the session as visited so the visitor is not counted multiple times in one session
+      sessionStorage.setItem('visited', true);
+  }
+
+  // Display the updated visitor count
+  document.getElementById('visitor-count').innerText = totalVisitors;

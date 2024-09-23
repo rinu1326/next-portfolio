@@ -1349,3 +1349,25 @@ color: var(--title-color);
         transform: rotate(360deg);
     }
 }
+
+.visitor-count {
+    font-size: 24px;
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7e7e7a;
+}
+.visitor-count i {
+    margin-right: 7px;
+    
+    
+}
+    
+
+#visitor-count {
+    position: relative;
+    top: 7.5px; /* Moves the text down by 5px */
+    right: -3px;
+}
