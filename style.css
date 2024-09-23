@@ -1338,10 +1338,9 @@ color: var(--title-color);
         margin-top: 5.8px;
         margin-left: 15px !important;
     }
-
-    .logo{
-        margin-right: 0;
-    }
+.eye-icon{
+    margin-right: 60px;
+}
 }
 
 /* Spinner Animation */
@@ -1372,12 +1371,12 @@ color: var(--title-color);
 
 #visitor-count {
     position: relative;
-    top: 7.5px; /* Moves the text down by 5px */
+    top: 7.5px; 
     right: -3px;
 }
-.logo{
+/* .logo{
     margin-right: 20px;
-}
+} */
 .eye-icon{
     margin-right: 10px;
 }
