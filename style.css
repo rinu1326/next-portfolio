@@ -1338,6 +1338,10 @@ color: var(--title-color);
         margin-top: 5.8px;
         margin-left: 15px !important;
     }
+
+    .logo{
+        margin-right: 5px;
+    }
 }
 
 /* Spinner Animation */
