@@ -328,7 +328,7 @@ loadMoreBtn.addEventListener('click', function () {
 document.addEventListener('contextmenu', (e) => {
     e.preventDefault(); 
     Swal.fire({
-        title: 'Inspecting is not allowed in my Portfolio',
+        title: 'Inspecting is !allowed in my Portfolio',
         text: 'Right click is disabled on this portfolio.',
         icon: 'warning',
         confirmButtonText: 'OK',
@@ -343,7 +343,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
         e.preventDefault(); 
         Swal.fire({
-            title: 'i told you Inspecting is not allowed!',
+            title: 'i told you before Inspecting is  !allowed',
             text: 'Developer tools are disabled on this portfolio.',
             icon: 'warning',
             confirmButtonText: 'OK',
