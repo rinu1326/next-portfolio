@@ -1340,7 +1340,7 @@ color: var(--title-color);
     }
 
     .logo{
-        margin-right: 5px;
+        margin-right: 0;
     }
 }
 
@@ -1377,4 +1377,7 @@ color: var(--title-color);
 }
 .logo{
     margin-right: 20px;
+}
+.eye-icon{
+    margin-right: 10px;
 }
