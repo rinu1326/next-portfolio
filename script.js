@@ -325,7 +325,7 @@ loadMoreBtn.addEventListener('click', function () {
 
 
 
-document.addEventListener('contextmenu', (e) => {
+document.addEventListener('contextmennu', (e) => {
     e.preventDefault(); 
     Swal.fire({
         title: 'Inspecting is not allowed in my Portfolio',
@@ -357,25 +357,63 @@ document.addEventListener('keydown', (e) => {
 
 
 
-  // This variable simulates the total visitor count
-  let totalVisitors = localStorage.getItem('totalVisitors');
+//   // This variable simulates the total visitor count
+//   let totalVisitors = localStorage.getItem('totalVisitors');
 
-  // If it's the first time visiting, initialize the visitor count
-  if (!totalVisitors) {
-      totalVisitors = 0;
-  } else {
-      totalVisitors = parseInt(totalVisitors);
-  }
+//   // If it's the first time visiting, initialize the visitor count
+//   if (!totalVisitors) {
+//       totalVisitors = 0;
+//   } else {
+//       totalVisitors = parseInt(totalVisitors);
+//   }
 
-  // Check if the user has visited before in the session (to avoid double counting)
-  if (!sessionStorage.getItem('visited')) {
-      // Increment total visitors by 1
-      totalVisitors += 1;
-      localStorage.setItem('totalVisitors', totalVisitors);
+//   // Check if the user has visited before in the session (to avoid double counting)
+//   if (!sessionStorage.getItem('visited')) {
+//       // Increment total visitors by 1
+//       totalVisitors += 1;
+//       localStorage.setItem('totalVisitors', totalVisitors);
 
-      // Mark the session as visited so the visitor is not counted multiple times in one session
-      sessionStorage.setItem('visited', true);
-  }
+//       // Mark the session as visited so the visitor is not counted multiple times in one session
+//       sessionStorage.setItem('visited', true);
+//   }
 
-  // Display the updated visitor count
-  document.getElementById('visitor-count').innerText = totalVisitors;
+//     // Select all elements with id 'visitor-count' (for both navbar and footer)
+//     const visitorCountElements = document.querySelectorAll('#visitor-count-item');
+
+//     // Update all visitor count elements with the totalVisitors value
+//     visitorCountElements.forEach(el => {
+//         el.innerText = totalVisitors;
+//     });
+
+
+   
+        // Retrieve total visitor count from localStorage
+        let totalVisitors = localStorage.getItem('totalVisitors');
+        
+        // If there's no total visitor count in localStorage, initialize to 0
+        if (!totalVisitors) {
+            totalVisitors = 0;
+        } else {
+            totalVisitors = parseInt(totalVisitors);
+        }
+
+        // Check if the user has visited before using 'visitedBefore' flag
+        if (!localStorage.getItem('visitedBefore')) {
+            // Increment total visitors by 1 (this is a first-time visit)
+            totalVisitors += 1;
+
+            // Store updated totalVisitors count in localStorage
+            localStorage.setItem('totalVisitors', totalVisitors);
+
+            // Set the 'visitedBefore' flag to prevent counting again
+            localStorage.setItem('visitedBefore', 'true');
+        }
+
+        // Update the visitor count in all elements with class 'visitor-count-item'
+        const visitorCountElements = document.querySelectorAll('#visitor-count-item');
+        
+        // Display the visitor count in each of those elements
+        visitorCountElements.forEach(el => {
+            el.innerText = totalVisitors;
+        });
+   
